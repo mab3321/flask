@@ -34,7 +34,7 @@ steps:
   - name: google/cloud-sdk
     args:
       [
-   "gcloud"," builds" ,"submit", "--tag", "gcr.io/resonant-fiber-378707/flask"
+   "gcloud","builds" ,"submit", "--tag", "gcr.io/resonant-fiber-378707/flask"
       ]
   - name: google/cloud-sdk
     args:
