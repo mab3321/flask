@@ -36,13 +36,14 @@ steps:
       [
    "gcloud","builds" ,"submit", "--tag", "gcr.io/resonant-fiber-378707/flask"
       ]
-  - name: google/cloud-sdk
     args:
       [
         "gcloud",
         "run",
         "deploy",
         "helloworld-${SHORT_SHA}",
+        "--image",
+        "gcr.io/resonant-fiber-378707/flask"
         "--region",
         "us-central1",
         "--platform",
