@@ -44,7 +44,7 @@ steps:
         "deploy",
         "helloworld-${SHORT_SHA}",
         "--image",
-        "gcr.io/resonant-fiber-378707/flask"
+        "gcr.io/resonant-fiber-378707/flask",
         "--region",
         "us-central1",
         "--platform",
