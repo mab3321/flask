@@ -21,4 +21,4 @@ def test_index() -> str:
 
     r = client.get("/")
     assert r.status_code == 200
-    assert "Hello World" in r.data.decode("utf-8")
+    assert "Hello Universe" in r.data.decode("utf-8")
