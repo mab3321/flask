@@ -34,6 +34,11 @@ steps:
   - name: google/cloud-sdk
     args:
       [
+   "gcloud"," builds" ,"submit", "--tag", "gcr.io/resonant-fiber-378707/flask"
+      ]
+  - name: google/cloud-sdk
+    args:
+      [
         "gcloud",
         "run",
         "deploy",
@@ -56,5 +61,5 @@ artifacts:
 # [END cloudbuild_python_logs_yaml]
 # Store images in Google Artifact Registry
 images:
-  - us-central1-docker.pkg.dev/${PROJECT_ID}/${_ARTIFACT_REGISTRY_REPO}/myimage${SHORT_SHA}
+  - gcr.io/resonant-fiber-378707/flask
 # [END cloudbuild_python_yaml]
